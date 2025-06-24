@@ -1,0 +1,160 @@
+<!-- Events in JS  
+The change in the state of an object is known as an event .
+Events are fired to notify code of "Interesting changes" that may affect code execution.  
+
+* Mouse events (click, double click )
+* keyboard events (keypress, keyup, keydown)
+* Form events ( submit)
+* print event & many more
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jss Events</title>
+    <style>
+            button{
+                border: 2px solid black;
+                box-shadow: 3px 3px 3px green;
+                height: 30px;
+                text-align: center;
+                margin-top: 25px;
+                border-radius: 20px;
+            }
+
+
+        #btn{
+            padding: 20px;
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor:pointer
+            ;
+        }
+
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .Light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Browser events:
+    click
+    contextmenu
+    mouseover/mouseout 
+    mousedown/mouseup 
+    mousemove 
+
+
+
+    submit
+
+    focus
+
+    DOMcontentloaded
+    transitionaend
+     -->
+
+     <div class="container">
+        <h1>this is my heading</h1>
+        <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, cumque! Accusamus
+             exercitationem laboriosam eaque nostrum eveniet quaerat, quis recusandae sed excepturi amet? 
+             Accusantium officiis mollitia quasi laborum, quas harum autem nulla quaerat praesentium 
+             voluptatem neque, fuga quo impedit, commodi nesciunt voluptas! Quidem neque laboriosam provident
+            perspiciatis sed cupiditate sit labore laudantium consequuntur quas sint natus ea omnis nam,
+            numquam recusandae placeat corporis inventore magnam et ullam commodi facilis impedit! Labore
+            eos voluptate alias consectetur quam nihil non obcaecati ipsa nam quae dolorem exercitationem,
+             dolorum, sed, quisquam enim fuga illo incidunt porro tempora ullam earum veniam possimus?
+              Doloremque dolores, iste, sequi dignissimos maxime nisi aliquid architecto culpa                   assumenda laudantium ut quo? Natus amet tempora totam illo, tempore autem voluptas id.
+            Magnam cumque assumenda quam ad libero, ipsum quas repudiandae accusamus hic deserunt
+             aperiam explicabo! Tempora voluptatibus unde, sapiente ducimus magnam beatae reiciendis
+              dolorem ex numquam aspernatur nam voluptatum ut quod! Culpa minima error cum, quo enim
+            quibusdam sed quos reprehenderit dolorum consectetur provident rerum corrupti totam soluta nemo
+             sit alias velit veniam delectus! Vitae expedita vel animi quaerat totam quia quis atque,
+              tempora odit! Consectetur earum ipsa error consequatur corrupti doloribus aut, qui eligendi a 
+              minima, animi quidem ut magnam. Molestiae labore dignissimos saepe ab pariatur? Animi ad               corporis vero maiores rerum facere, quam illo! Excepturi fugiat illum quisquam rerum sint nobis
+            facere maiores repellat modi. Cum fuga provident possimus, tenetur, vitae, optio accusantium
+             velit voluptates est quos minima! Aliquid incidunt commodi non perspiciatis, a aperiam 
+             officia labore doloribus repellat atque, inventore, rerum error obcaecati magnam facere
+              deserunt beatae. Corrupti sit libero recusandae delectus, numquam iste optio, quasi nihil eius 
+            deleniti vel minus sequi odit quam nulla aut excepturi cum at eum modi nemo earum? Non quisquam sint adipisci totam rerum consectetur labore. Voluptas reprehenderit aperiam, sunt omnis a natus? Inventore?</p>
+     </div>
+     
+     <button id="btn" onclick="togelehide()">show/hide</button>
+     
+     <button onclick="console.log('one time click');alert('hello jii')">click me </button><br>
+     
+     <button ondblclick="console.log('See magic...............  ')">Click me 2 time result in console </button><br>
+
+     <button id="mode">Change Background</button><br>
+     <script>
+//  
+ let para = document.getElementById('para');
+         para.addEventListener('mouseover', function run(){
+            //alert('mouse insie')
+            console.log('mouse inside');
+         });
+
+         para.addEventListener('mouseover', function run(){
+            console.log('mouse not wont outside');
+         });
+
+        
+// This (e) is an event object which will declare all data
+         para.onclick = (event) =>{
+            console.log(event);
+            console.log(event.type);
+            console.log(event.target);
+            console.log(event.clientX);
+         };
+
+
+// function to hide the text in browser
+        function togelehide(){
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block';
+            }
+        }
+
+// Function to change the background 
+        const mode = document.getElementById('mode');
+        let currentmode = "Light";
+        let body = document.querySelector("body");
+        mode.addEventListener("click",()=>{
+            if(currentmode === "Light"){
+                currentmode = "dark";
+                // document.querySelector("body").style.backgroundColor = "black";
+                body.classList.add("dark");
+                body.classList.remove("Light");
+
+            }
+            else{
+                currentmode = "Light";
+                // document.querySelector("body").style.backgroundColor = "white";
+                body.classList.add("Light");
+                body.classList.remove("dark");
+
+            }
+        })
+
+     </script>
+</body>
+</html>

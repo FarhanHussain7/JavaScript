@@ -1,0 +1,17 @@
+<!-- <script>
+    var message = "welcome to javascript"
+    document.write(message.slice(0,7))
+</script> -->
+
+
+<script>
+    function SentenceCase(string){
+        var firstChar = string.charAt(0);
+        var restChar = string.substring(1);
+        var sentence = firstChar.toUpperCase() + restChar.toLowerCase();
+        return sentence;
+    }
+    var message = "wElcomE to To JavaScripT";
+   // document.write(message  + "<br>");
+    document.write(SentenceCase(message));
+</script>

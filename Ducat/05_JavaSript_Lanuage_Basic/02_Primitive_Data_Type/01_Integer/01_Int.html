@@ -1,0 +1,62 @@
+<!-- Every HTML element value is string, you have to explicitly convert into number by using 
+	a) parseInt()
+	b) parseFloat()
+
+		var age = "22";
+		document.write(age + 1); 	//221
+		document.write(paresInt(age) + 1);   //23 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Integer data type</title>
+    <script>
+        function CalculateClick(){
+            var age = document.getElementById("Age").value;
+            document.getElementById("msg").innerHTML = (parseInt(age) + 1);
+        }
+    </script>
+</head>
+<body>
+    Age: <input type="number" id="Age" min="15" max="30">
+        <button onclick="CalculateClick()"> Calculate</button>
+        <span id="msg"></span>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Integer data type</title>
+    <script>
+        function CalculateClick(){
+            var age = document.getElementById("Age").value;
+            var msg = document.getElementById("msg");
+
+            if(isNaN(age)){
+                msg.innerHTML = "Plese Enter a Number";
+            }
+            else{
+                msg.innerHTML = "Your Age : " + age;
+            }
+        }
+
+        const a = 10;
+        console.log(a);
+        console.log(typeof a);
+    </script>
+</head>
+<body>
+    Age: <input type="number" id="Age">
+        <button onclick="CalculateClick()"> Calculate</button>
+        <span id="msg"></span>
+</body>
+</html>
+
+
+
+
+

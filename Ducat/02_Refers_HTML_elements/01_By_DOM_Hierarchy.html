@@ -1,0 +1,50 @@
+<!-- How javascript refers HTML elements in pages?
+1- By using DOM hierarchy
+	- You can refer HTMl elements by using their heirarchy in DOM.
+	- You have to access with reference of index number and 
+		parent and child heirarchy .
+
+syntax:
+	window.document.images[index].src="path";
+	window.document.form[index].element[index].value="";
+ 
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Repersenting elements with script</title>
+</head>
+<script  type="text/javascript">
+    function bodyload(){
+        //Giving the path of the image that is show on html
+        window.document.images[0].src="./landscape.jpg";
+        // Changeing the width of the image 
+        window.document.images[0].width="300px";
+        // Givening the name to button by his right index number in form[0]
+        window.document.forms[0].elements[0].value="Register";
+    // Givening the name to button by his right index number in form[1]
+        window.document.forms[1].elements[1].value="login";
+    }
+</script>
+<body onload="bodyload()">
+    <div>
+    <img  width="200px" height="200px">
+</div>
+    <div>
+        <form >
+            <h2>Register</h2>
+            <input type="button">
+            <input type="email">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            <input type="text">
+            <input type="button">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String and its methods in javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Lorem ipsum dolor sit amet.
+        </h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius similique sapiente quasi nisi corporis voluptas, totam vero minus doloribus odio alias, ea earum blanditiis temporibus perspiciatis doloremque consequuntur rerum
+             deleniti sint architecto reiciendis sit officiis. Nobis quos a aliquam voluptatum.</p>
+    </div>
+    <script>
+        //var String= 'that"s'; 
+        // - here we eaily used both single and double queot for showing the string 
+        var String = "this is string";
+        console.log(String[3]);
+        console.log(typeof String);
+
+        // Saved data in Two way 
+        var Name = " jihan";
+        var message = " have to pracise hard"
+
+         // Template Literals - It is a way to have embedded expressions in strings  
+        var temp = `${Name} is a 'nice' person and  he ${message}`; // (`)this key is called batic, present in side of num 1 key and up on tab key
+        console.log(temp);
+        var len = Name.length;
+        console.log(`length of the Name is ${len}`);
+//console.log(String + Name + message);                       // for adding multiple string
+
+console.log("-------------------------------------------------------------------------")
+
+        let obj = {
+            name: "Pant",
+            price: 12134,
+        };
+
+        console.log("the cost of", obj.name, " is ", obj.price,"rupees" );
+        // Template Literals
+        console.log(`the name is ${obj.name}, and his price is ${obj.price}`);
+        
+
+
+
+        // Escape Characters --------------------------------------
+        // scape sequnce \n for changing the line 
+        var Escape = "hello \n world \n im\t here\\";
+        console.log(Escape);
+        console.log(Escape.length);
+
+
+        // string constructor
+        // var y = new String("this");
+        // console.log(y);
+
+        // this is a method to put string in the html body by the script 
+        document.getElementById("content").innerHTML = '<h3> this is an heading</h3>'
+    
+console.log("=================================================================");
+        // Method :- thes are built-in function to manipulate a string 
+        //    1- .toUpperCase()
+        let college = "hi-tech College ";
+        console.log(college.toUpperCase());    
+        let newStr = college.toUpperCase();
+        console.log(newStr);
+        //    2- .toLowerCase()
+         let Str = "HI-tech College ";
+         let myStr = Str.toLowerCase();
+         console.log(myStr);
+        //    3- .trim() - help to remove the white spaces from the values 
+        let Space = "      Hi-Tech colllege    gzb     ";
+        console.log(Space);
+        console.log(Space.trim());
+        //    4 - .slice(start,end)  return part of string
+        let num = "0123456";
+        console.log(num.slice(1,6)); 
+        let char = "hello ";
+        console.log(char.slice(0));
+        console.log(char.slice(2,4));
+
+        //  5 - .concat(str2)  help to join the two strings
+        let str1 = "Hi-Tech ";
+        let str2 = "College";
+        console.log(str1+str2);
+        console.log(str1.concat(str2));
+        //  6 - .replace(SearchVal,newVal) - use for finding and replacing the values
+        let color = "hello";
+        console.log(color.replace("h","Y"));
+
+
+        //  7 - .charAt(index)
+        let STR = "Hello ji";
+        console.log(STR.charAt(2));
+
+        
+        // Practise 
+        //Question 01 - Enter name my user and name must be start with @ and finish with the specila char
+
+        let name1 = prompt("Plese Enter your full name");
+        let special = "@" + name1 + name1.length;
+        console.log(special);
+        const fullname = special.concat(name1);
+        console.log(fullname);
+
+    </script>
+</body>
+</html>

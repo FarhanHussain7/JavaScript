@@ -1,0 +1,219 @@
+<!-- 
+Synchronous
+------------------
+- Synchronus means that code run in a particular sequence of instruction given in the program.
+- Each instruction waits for the previous instruction to complete its execution.
+
+Asynchronous
+------------------
+- Due to synchronous programming sometime imp instruction get blocked due to some previous instructions,
+    which causes a delay in the UI. Asynchronous code execution allows to execute next instructions immediately and 
+    doesn't block the flow.
+
+CallBack 
+------------------
+- A callback is a function passed as an argument to another function . 
+
+problem in callback 
+ - callback hell : Nested callback stacked below one another forming a pyramid structure. 
+    (pyramid of doom)
+
+    this style of programming becomes difficult to understand and manage. 
+
+Promises
+------------------
+- Promise is for "eventual" completion of task. It is an object in JS.
+- It is a solution to callback hell.
+
+let promise = new Promise((resolve, reject) =>{....});
+                    // function with 2 handlers (resolve and reject are callback provide by JS)
+
+- A Javascript promise object can be: 
+1 - Pending : the result is undefined 
+2 - Resolved : the result is a value (fulfilled)            resolved(result)
+3 - Rejected : the result is an error object                reject(error)
+
+
+Async-Await 
+------------------
+ - asyns function always return a promise. 
+ 
+    async function myFunction(){......}
+
+- await pause the execution of its surrounding async function until promise is started.
+- await only used with in async function 
+
+IIFE : Immediately Invoked Function Expression
+-------------------------------------------------
+- IIFE is a function that is called immediately as soon as it is defined.
+
+function f1(){
+    ()=>{
+        ()=>{
+            ()=>{
+                };
+            };
+    };
+};
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Welocme to Asynchronous</H1>
+</body>
+
+<script>
+// ========================  Synchronous Programming ================================================
+    console.log("this is line 1");
+     console.log("this is line 2");
+      console.log("this is line 3");
+       console.log("this is line 4");
+
+//  Time Out functionality 
+//  1 -  way (function write call inside setimeout body )
+    function hello(){
+        console.log("helloo.....");
+    }
+
+    setTimeout(hello, 2000);
+// 2 way (Function is writen inside the setTimeout body)
+setTimeout(()=>{
+    console.log("Another way to use setTimeout...");
+}, 4000);
+
+
+//  =============================== Asyn pro =============================================
+
+console.log("one");
+console.log("two");
+setTimeout(()=>{
+    console.log("Asynchronus programing.............");
+}, 4000);
+console.log("three");
+
+// ============================== CallBack =========================================
+
+function sum(a, b){
+    console.log(a+b);
+}
+
+function calculate(a, b, sumCallBack){
+sumCallBack(a,b);
+}
+
+calculate(1, 2, sum);
+
+// another way to set callback function 
+calculate(2, 3, (a, b)=>{
+    console.log(a+b);
+});
+
+const helloo = ()=>{
+    console.log("Synchronised callback ---------")
+};
+
+setTimeout(helloo, 5000);
+
+//--  Callback Hell ----------- 
+function getData(DataId, getnextData){
+        // timeout 
+        setTimeout(()=>{
+            console.log("data", DataId);
+            //  condition for next getdata() , now you call multiple getData function with settimeout value
+            if(getnextData){
+                getnextData();
+            }
+        }, 3000);
+    };
+
+
+// result will print after 7sec 
+getData(12, ()=>{ // this callback help to print another getData function with the same time period 
+    //  We used callback function beacuse it give risult without error, but if i directly call getNextData it give error.
+    // now i can multiple getdata callback function without any problem 
+    getData(2, ()=>{
+        getData(45, ()=>{
+            getData(56, ()=>{
+                getData(89);
+            });
+        })
+    });
+}); 
+
+// ===================================== Promise ===================================
+let promise = new Promise((resolve, reject)=>{
+    console.log("I am a promise");
+    // resolve(1234);
+    reject("Some Error Occured.........");
+});
+
+// function getData1(DataId, getnextData){
+//         new promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             console.log("data", DataId);
+//             resolve("suceessss...");
+//             if(getnextData){
+//                 getnextData();
+//             }
+//         }, 3000);
+//         });
+//     };
+
+//     let promise1 = getData1(123);
+
+const getPromise = () => {
+    return new Promise((resolve, reject)=>{
+        console.log("This is getPromise...");
+    resolve("yes.....................");
+    });
+};
+
+let pro = getPromise();
+pro.then((res)=>{
+    console.log("Promise fullfilled ");
+});
+
+let rej = getPromise();
+pro.catch((reje)=>{
+    console.log("Error Occureeddd------------- ");
+});
+ 
+
+ // ========================================== Await ========================================================
+
+function api(getId){
+    return new Promise((resolve, reject)=>{
+       setTimeout(()=>{
+        console.log("******* This is  for await ********* : " + getId);
+        resolve(200);
+        }, 5000);
+    });
+};
+
+// If i directly use await then it will provide error
+// await api();
+
+async function GetAptDaa() {
+//    await only used in async function
+    console.log("This is the first 1");
+    await api(1);
+    console.log("This is the second 2");
+    await api(2);
+    console.log("This is the third 3");
+    await api(3);
+    console.log("This is the fourth 4");
+    await api(4);
+};
+
+GetAptDaa();
+
+
+
+</script>
+</html>

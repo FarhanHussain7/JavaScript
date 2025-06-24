@@ -1,0 +1,153 @@
+<!--  Classes and Object 
+  ========================
+  O1 - prototype in js : - A javascript Object is an entity having state and behaviour (properties and method)
+                    - JS objects have a special property called prototype
+                    - We can set prototype using __proto__
+  
+ 02 - Classes in js : - Class is a program-code template for creating objects.
+                      - Those objects will have some state (variables) & some behaviour (funsction) inside it.
+            
+            class MyClass{
+                constructor(){.....} - automatically invoked by new 
+                                     - Intialize object
+
+                MyMethod(){......}
+            }
+
+        let myObj = new MyClass();
+ 03 - Inheritance in js : - inheritance is passing down properties and methods from parent class to child class.
+        class Parent { 
+        
+        }
+
+        class Child extend parent {
+        
+        }
+
+    Super Keyword - The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+        super(args) // calls parent's construtor
+        super.parentMethod(args)
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and Object</title>
+</head>
+<body>
+    <h1>Welcome jiiii...........</h1>
+</body>
+<script>
+    //================= ProtoTypes Concept ============================  
+
+    // 1 - Pridefine prototype 
+    const student = {
+        fullName : "FarhanHussain",
+        marks : 94.3, 
+        printMarks : function () {
+            console.log("marks = ", this.marks);// this. means we are using the marks propertie which is hard using directly .
+        },
+    };
+
+// 2 - Built in Prototype 
+    const employee = {
+      calculateTax () {
+        console.log("thsi is company area");
+      },
+    };
+
+    const Jihan = {
+        salary : 50000,
+    };
+
+    Jihan.__proto__=employee;
+
+
+    // =====================Class and Object ==========================
+
+    class MahendraCar {
+        constructor(brand, mileage){
+            console.log("this is constructor");
+            this.brand = brand;
+            this.mileage = mileage;
+        }
+
+        start(){
+            console.log("Engine is started now");
+        }
+        stop(){
+            console.log("Car is stoped");
+        }
+        //  it will create a variable with name of "brandname" and when an object set brand it will print in class  
+        setbrand(brand){
+            this.brandname = brand;
+        }
+    };
+
+    let fortuner = new MahendraCar("BMW", 13);
+    //  Accessing the method 
+    fortuner.start();
+// setting new brand name of car 
+    fortuner.setbrand("Fortuner");
+
+// =============== Inheritance ===================
+
+class Parent {
+    hello(){
+        console.log("Welcome home");
+    }
+}
+// to inherit class of parent we use "extends" keyword 
+class child extends Parent{
+    // now child can used method of there parent class
+}
+
+
+let object = new child();
+object.hello();
+
+
+
+
+
+class Person {
+    // parent constructor
+    constructor(name){
+        this.speicies = "Homo sapiens";
+        this.name = name;
+    }
+    eat(){
+        console.log("Eating food.....");
+    }
+    sleep(){
+        console.log("Person is sleeping.....");
+    }
+    work(){
+        console.log("work is in process");
+    }
+};
+class Engineer extends Person{
+
+    // before using constructor in child we have to call parent class constructor otherwise it will show error 
+    constructor(name, branch){
+        // super(); // super keyword is used to invoke parent constructor so it will execute first 
+      super(name);
+        this.branch = branch; 
+    }
+   
+    //  If child and parent have same method , child method will be used [method overriding]
+    work(){
+        console.log("Working hard to get success");
+    }
+};
+
+let MyObject = new Engineer("farhan hussian", "chemical enge");
+// these both method will inherit from parent class 
+MyObject.eat();
+MyObject.sleep();
+//  this method has same name that's why it will print it own value 
+MyObject.work();
+</script>
+</html>

@@ -1,0 +1,158 @@
+<!-- 
+ 1- You can read by using property name 
+Ex:- 
+<script> 
+	var categories = ["Electronics", "Footwear"];
+	document.write(categories["1"]);
+</script>
+
+2- You can use "toString()", which returns all elements seprated with delimeter ","
+Ex:- 
+<script> 
+	var categories = ["Electronics", "Footwear","Fashion"];
+	document.write(categories.toString());
+</script>
+3. You can use "join()", which used custom delimeter.
+Ex:-
+<script> 
+	var categories = ["Electronics", "Footwear","Fashion"];
+	document.write(categories.join("/"));
+</script>
+4- You can read by using map(), It is an iterator that reads every element from array and presents in the UI.
+Ex:- 
+<script> 
+	var categories = ["Electronics", "Footwear","Fashion"];
+	categories.map(function(category){
+	document.write(`<h2>${category}</h2>`);
+	})
+</script>
+5. You can read by using for..in statement, which returns all properties
+Syntax:
+	for(var property in collection)
+	{
+	}
+Ex:-
+<script> 
+	var categories = ["Electronics", "Footwear","Fashion"];
+	for(var property in categories)
+	{
+	document.write(property + "<br>");
+	}
+</script>
+
+6. You can read all values by using "for..of"
+Syntax:
+	for(var value of collection)
+	{
+	}
+Ex:- 
+<script> 
+	var categories = ["Electronics", "Footwear","Fashion"];
+	for(var value of categories)
+	{
+	document.write(value+ "<br>");
+	}
+</script>
+7. You can read both properties and values by using for...in
+Ex:-
+<script> 
+	var categories = ["Electronics", "Footwear","Fashion"];
+	for(var property in categories)
+	{
+	document.write(`[${property}] : ${categroies[property]}<br>`);
+	}
+</script>
+
+8. You can use "find()" method, which can search and return only that matches your condition. It
+	returns single value.
+<script> 
+	var sales = [45000, 60000, 62000, 24000, 53000];
+	 var result = sales.find(function(value){
+		return value<=50000;
+	});
+	document.write(result+ "<br>");
+</script>
+
+9. You can use "filter()" method, which returns all values that match the given condition.
+
+Ex:- 
+<script> 
+	var sales = [45000, 60000, 62000, 24000, 53000];
+	 var result = sales.filter(function(value){
+		return value>=50000;
+	});
+	document.write(result + "<br>");
+</script>
+
+10. You can use "for" loop for reading values
+Syntax: 
+	for(var i = 0; i<collection.length; i++)
+	{
+	}
+Ex:- 
+<script> 
+	var sales = [45000, 60000, 62000, 24000, 53000];
+	 for(var i = 0; i<sales.length; i++)
+	{
+		document.write(sales[i]+ " <br>");
+	}
+</script>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <script>
+       var categories = ["Electronics", "Footwear","Fashion"];
+       var sales = [45000, 60000, 62000, 24000, 53000];
+            // Technique -1
+       document.write(categories["1"]);        
+             // Technique -2             
+       document.write(categories.toString(),"<br>");  
+             // Technique -3     
+       document.write(categories.join("/"));    
+             // Technique -4           
+       categories.map(function(category){                  
+	document.write(`<h2>${category}</h2>`);
+	})
+     // Technique -5
+    for(var property in categories)                        
+	{
+	document.write(property + "<br>");
+	}
+            // Technique - 6
+    for(var value of categories)
+	{
+	document.write(value+ "<br>");
+	}
+            // Technique - 7
+    for(var property in categories)
+	{
+	document.write(`[${property}] : ${categroies[property]}<br>`);
+	}
+
+
+            // Technique - 8
+	 var result = sales.find(function(value){
+		return value<=50000;
+	});
+	document.write(result+ "<br>");
+
+            // Technique - 9 
+    var result = sales.filter(function(value){
+		return value>=50000;
+	});
+	document.write(result + "<br>");
+
+            // Technique - 10
+    for(var i = 0; i<sales.length; i++)
+	{
+		document.write(sales[i]+ " <br>");
+	}
+    
+    </script>
+ </head>
+ <body>
+    <h1>Array value reading technique</h1>
+ </body>
+ </html>

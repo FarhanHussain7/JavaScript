@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math's object</title>
+</head>
+<body>
+    <div class="container">
+        <h1>this is math object topic</h1>
+    </div>
+    <script>
+        //Printing Maths objects
+        let m = Math;
+        console.log(m);
+
+
+        // printing maths constant value 
+        // Math.(E) means Euler's number
+        console.log("the value of math. E is ", Math.E);
+        console.log("the value of math. PI is ", Math.PI);
+        console.log("the value of math. LN2 is ", Math.LN2);
+        console.log("the value of math. SQRT is ", Math.SQRT1_2);
+        console.log("the value of math. LOG2E is ", Math.LOG2E);
+        
+        //Printing the function from Math obbject
+        let a = 34.453245;
+        let b = 89;
+        console.log(" the value of a and b is" , a, b);
+        console.log("the value of a and b rounded is ", Math.round(a), Math.round(b));
+
+        // power value 
+        console.log("3 raised to the power of 2 is", Math.pow(3,2));
+        console.log("2 raised to the power of 6 is", Math.pow(2,6));
+        console.log("4 raised to the power of 3 is", Math.pow(4,3));
+
+
+        //squar root of values
+        console.log("Square root of 36 is ", Math.sqrt(36));
+        
+        console.log("Square root of 64 is ", Math.sqrt(60));
+
+        console.log("Square root of 50 is ", Math.sqrt(50));
+
+
+        //ceil and floor -- ceil show the upper nearest value and floor shows lower nearest value
+        console.log("5.8 rounded up to nearest integer is", Math.ceil(5.8));
+        console.log("5.8 rounded up to nearest integer is", Math.floor(5.8));
+
+        //Absolute value -- return negative value in positive result
+        console.log("Absolute value of 5.66 is ", Math.abs(5.66));
+        console.log("Absolute value of -5.66 is ", Math.abs(-89.66));
+
+        //Trignometery Function
+        console.log("the value in sin(pi) is ",Math.sin(Math.PI/2));
+        console.log("the value in tan(pi) is ",Math.tan(Math.PI/2));
+        console.log("the value in cos(pi) is ",Math.cos(Math.PI/2));
+
+
+        // Min and Max function 
+        console.log(" Minumum value of 4, 5, 6 is ", Math.min(4,5,6));
+        console.log(" Minumum value of  14, 5, 16 is ", Math.min(14,5,16));
+        console.log(" Maxmimum value of 4, 5, 6 is ", Math.max(4,5,6));
+        console.log(" Maxmimum value of 14, 5, 16 is ", Math.max(14,5,16));
+
+
+        //Generating a random number 
+        let r = Math.random();
+        //random number b/w (a,b) =a +(b-a)*Math.random()
+        let a1 = 1;
+        let b1 = 100;
+        let r1_100 = a1 + (b1-a1)*Math.random();
+        console.log("the random number of r is ", r);
+        console.log(" the random number of r1_100 is", r1_100);
+       
+        
+    </script>
+</body>
+</html>

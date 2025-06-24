@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and time in Js</title>
+    <style>
+        .container{
+            font-size: 23px;
+            background-color: rgb(185, 44, 44);
+            border: 2px solid rgb(209, 156, 156);
+            padding: 30px;
+            margin: 3px;
+            text-align: center;
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        this is curent time  <span id="time"></span>
+    </div>
+    <script>
+        console.log("this is a date and time code in js");
+        let now = new Date();
+        console.log(now);
+
+// If you put new date(0) then it will goes to Thu jan 01 1950 because it is the starting point 
+        let dt = new Date(1000);
+        console.log(dt);
+
+        let newdate  = new Date("2022-09-23");
+        console.log(newdate);
+
+        //let newDate = new Date(year, months, date, hours, minutes, second, millisecond);
+        let newDate = new Date(3023, 4,6,9,3,2,45);
+        console.log(newDate);
+
+        
+        
+        let year = newDate.getFullYear();
+        console.log("this year is " + year);
+        
+        let dat = newDate.getDate();
+        console.log("this date is " + dat);
+        
+        let month = newDate.getMonth();
+        console.log("this month is " + month);
+
+        let hour = newDate.getHours();
+        console.log("this year is " + hour);
+
+        let day = newDate.getDay();
+        console.log("this day is " + day);
+
+        //Giving the new date from client side 
+        //newDate.setDate(5);
+        newDate.setDate(35);
+        newDate.setMinutes(39);
+        console.log(newDate);
+
+        setInterval(updateTime, 1000);
+
+        function updateTime(){
+            time.innerHTML = new Date ();
+        }
+
+        // If you type Date.now() in chrome consol than it will print the all seconds from the starting
+
+    </script>
+</body>
+</html>

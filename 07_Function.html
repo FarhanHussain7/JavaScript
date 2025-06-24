@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>function in javascript</title>
+</head>
+<body>
+    <div class="container">
+        this is a container
+        <script>
+            // functions
+            
+// Function is an block of code that perfome a specific task , can be invoked whenever needed
+// It is divided into two parts
+//1- Function Definition  ---------  funtion name(Parameter, Param){ code }
+//2- Function Call    ---------------  name(arguments);
+
+            function greet(name, greetText) {
+ // local scope variable no one can used or know about him outside this function
+                let name1 = "Name1";
+                console.log(greetText + " " + name);
+                console.log(name + " is a good boy");
+            }
+// Global scope every one know about him becuse this is outside from function
+             let name1 = "harry";
+            let name2 = "rohan";
+            let name3 = "amit";
+            let name4 = "uday";
+            let greetText = " Good moring";
+            greet(name1, greetText);
+            greet(name2, greetText);
+            greet(name3, greetText);
+            greet(name4, greetText);
+            
+            function sum(a,b,c) {
+                let d = a + b + c;
+ // return keyword in function used to close the functioning , so  what ever code you write after 
+ // return line this will not work 
+                return d; 
+// console.log("function is undefined"); ---this line will never reach because it is after return
+            }
+
+            let returnVal = sum(1,2,3);
+            console.log(returnVal);
+
+    
+            // let returnVal = greet(name1);
+            // let returnVal1 = greet(name2);
+            // console.log(returnVal);
+            
+            // console.log(name1 + " is a good boy");
+            // console.log(name2 + " is a good boy");
+            // console.log(name3 + " is a good boy");
+            // console.log(name4 + " is a good boy");
+
+
+            function factorial(n){
+                fact = 1
+                for (let i = 1; i <= n  ; i++ ){
+                    fact = fact * i;
+                }
+                return fact    
+            }
+
+            let u  = factorial(5);
+            console.log(u);
+// Arrow Function(=>) - Compact way of writing a function
+//                 const function=(param1, param2)=>{ code  }
+            const ArrowSum=(u, v)=> {
+                console.log(u+v);
+            };
+            ArrowSum(4,5);
+
+            const ArrowMul=(x, y)=>{
+                return x * y ;
+            };
+            ArrowMul(2, 5);
+
+
+
+//Question 1 - Create a function using the "function" keyword that takes a String as a argument & 
+//                 returns the number of vowels in the string. 
+
+                function CountVoW(Str){
+                    var count = 0 ;
+                    for (const char of Str) {
+                        if( 
+                        char === "a" || 
+                        char === "e" ||
+                        char === "i" || 
+                        char === "o" || 
+                        char === "u")
+                        {
+                            count++;
+                        } 
+                    }
+                    return count;
+                }
+
+                CountVoW("abce");
+
+            //Question 2 - Create an arrow function to perform the same work.
+
+
+
+            
+// ForEach Loop in Arrays
+   //                 arr.forEach(CallBackFunction){
+    //                    
+    //                };
+// Callbackfunction : Here it is a function to execute for each elements in the array
+// A Callback is a function passed as an argument to another function.
+
+                let arr = [2, 3, 4, 5];
+                arr.forEach(function print(val){
+                    console.log(val);
+                });
+
+                arr.forEach((val) => {
+                    console.log(val)
+                });
+
+        //question 3 - Print randaom number then create a function which can give square of every number? 
+
+        arr.forEach((num)=>{
+            console.log(num * num);
+        })
+// Some more Array Method. 
+// Map method - Creates a new array with the result of some operation. The value its callback return are used to form
+// New array
+//      arr.map(callbackfun(value, index, array))
+
+    let NewArr = arr.map((val)=> {
+        return val * 2;
+    });
+    console.log(NewArr);
+
+
+// Some more Array Methods
+// Filter - Creates a new array of elements that give true for a condition/filter.
+// Eg:- all even elements 
+   let Evenarr = arr.filter((val)=> {
+         return val%2 == 0; 
+   });
+   console.log(Evenarr);
+
+   let Lessthanarr = arr.filter((val)=> {
+         return val < 3; 
+   });
+   console.log(Lessthanarr);
+
+   let Greaterthanarr = arr.filter((val)=> {
+         return val > 2; 
+   });
+   console.log(Greaterthanarr);
+//Reduce - Performs some operations & reduces the array to a string value. It returns that single value.
+
+   let output = arr.reduce((res, cur)=> {
+    return res + cur;
+   });
+   console.log(output)
+
+   
+   let output1 = arr.reduce((res, cur)=> {
+    return res > cur ? res : cur ;    // return greater number 
+   });
+   console.log(output1)
+
+
+   //Question - take array elements form user and print the sum of the array elements
+   let n = prompt("Enter the Size of Array");
+  let arr1 = [];
+
+  for (let i = 1; i<=n ; i++) {
+     arr1[i-1] = i ;
+  }
+  console.log(arr1);
+  
+  let Addition = arr1.reduce((res , curr )=> {
+    return res + curr; 
+  })
+console.log("Sum  = ", Addition);
+
+let factorial1 = arr1.reduce((res , curr )=> {
+    return res * curr; 
+  })
+console.log("Factorial  = ", factorial1 );
+
+
+
+
+        </script>
+    </div>
+</body>
+<!-- <script>src= "function.js"</script> -->
+</html>

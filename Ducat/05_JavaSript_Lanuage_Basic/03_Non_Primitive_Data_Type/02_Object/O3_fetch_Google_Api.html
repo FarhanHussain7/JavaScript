@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GetClick(){
+            document.getElementById("detailsContainer").style.display = "block";
+            fetch("./product.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(product){
+                document.getElementById("lblName").innerHTML = product.Name;
+                document.getElementById("lblName").innerHTML = product.Price;
+                document.getElementById("lblName").innerHTML = product.Photo;
+                document.getElementById("lblName").innerHTML = (product.Stock==true)?"Available":"Out of Stock";
+             })
+        }
+    </script>
+</head>
+<body onload="bodyload()" class="container-fluid">
+    <div class="card" style="width: 300px;">
+        <img >
+    </div>
+    <div id="detailsContainer" style="display: none;">
+        <h3>Product details</h3>
+        <dl>
+            <dt>Name</dt>
+            <dd id="lblName"></dd>
+            <dt>Price</dt>
+            <dd id="lblPrice"></dd>
+            <dt>Preview</dt>
+            <dd>
+                <img id="productImg" width="100" height="100" src="/pictures/jacket.jpg">
+            </dd>
+            <dt>Stock</dt>
+            <dd id="lblStock"></dd>
+        </dl>
+    </div>
+</body>
+</html>

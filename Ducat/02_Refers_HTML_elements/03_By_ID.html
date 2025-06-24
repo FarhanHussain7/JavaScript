@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Referance by ID</title>
+    <script type="text/javascript">
+        function bodyload(){
+            document.getElementById("pic").src="./landscape.jpg";
+            document.getElementById("Regi").value="Register";
+            document.getElementById("Log").value="Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img id="pic" name="pic" width="200px" height="200px">
+    </div>
+        <div>
+            <form name= "frmRegi">
+                <h2>Register</h2>
+                <input type="button" id="Regi" name="Regi">
+                <input type="email">
+            </form>
+        </div>
+        <div>
+            <form name="frmLog">
+                <h2>Login</h2>
+                <input type="text" >
+                <input type="button" id="Log" name="Log">
+            </form>
+        </div>
+</body>
+</html>

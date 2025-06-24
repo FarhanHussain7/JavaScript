@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Confirm</title>
+    <script>
+        function DeleteClick(){
+            flag = confirm("Are you sure, you want to delete your data ");
+            if(flag==true){
+                alert("Your data is deleted");
+            }else{
+                alert("Your data is not deleted");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Click Delete button to delete the records</h1>
+    <button onclick="DeleteClick()">delete records</button>
+</body>
+</html>

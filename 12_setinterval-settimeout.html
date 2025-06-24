@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js setTimeot and setInterval</title>
+</head>
+<body>
+    <div class="container">
+        this is time <span id="time">
+
+        </span>
+    </div>
+    <script>
+        console.log("this is settimeout and setinterval");
+        // setTimeout --> Allows us to take the function once after the interval of time
+        // clearTimeout --->Allows us to not take the function repeatedly after the interval of time
+        function greet(name, byeText){
+            console.log("good mornig " + name + " " + byeText);
+        }
+        timeOut = setTimeout(greet, 5000, " farhan " , " take care");
+            console.log(timeOut);
+        //     clearTimeout(timeOut);
+      // setTimeout(greet, 5000, " farhan " , " take care"); ---- in setTimeout we only use name not the function ()
+
+        Intervalid = setInterval(greet, 1000 , "harry" , "take care" );
+        clearInterval(Intervalid);
+        function displayTime(){
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+
+        }
+        setInterval(displayTime, 1000);
+
+
+
+
+    </script>
+</body>
+</html>

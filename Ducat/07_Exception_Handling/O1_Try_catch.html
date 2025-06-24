@@ -1,0 +1,19 @@
+<script>
+    try {
+        var x = 10 ;
+        var y = 7 ; 
+        var z = x / y ;
+        if (y==0) {
+            throw "Divided by zero : You can't divide by zero ";
+        }
+        if(y>x){
+            throw " Number too big: please Don't use the large number then x ";
+        }
+        document.write("Z= "+z + "<br>");
+    } catch (exp) {
+        document.write(exp + "<br>");
+    }
+    finally {
+        document.write("Program End : -Memory Cleanded");
+    }
+</script>

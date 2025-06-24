@@ -1,0 +1,53 @@
+<!-- Fetch API 
+ ----------------
+ - The fetch api provide an interface for fectching (sending /receving ) resources.
+ - It is uses Request and Response objects.
+ - The fetch method is used to fetch a resource (data)
+ 
+        let promise = fetch(url, [options])
+       
+Understanding Terms 
+---------------------------
+1 - AJAX - is Asynchronous JS and XML
+2 - JSON - is JAvascript Object Notation
+3 - json() method: return a second promise that resolve with the result of parsing the response body text as json.(input in JSON, output in js object)
+
+
+Request And Response 
+---------------------------
+- HTTP Verbs 
+- Http response status code
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+
+        const URl = "https://fakestoreapi.com/products";
+        
+        const getFacts = async()=>{
+            console.log("Getting api........");
+            let response = await fetch(URl);
+            console.log(response);
+            const data = await response.json();
+            console.log(data);
+        };
+    
+    console.log(getFacts);
+    
+    
+    </script>
+
+</html>

@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Loops </title>
+</head>
+<body>
+    <div class="container">
+        This a loops video
+    </div>
+    <script>
+        console.log("this is text ");
+        // Genral  Loops - for, while, do-while
+
+        //for loops 
+        let i = 0;
+        for(i=0; i<3; i++){
+            console.log(i);
+        }
+
+        // Print String values that are saved in the array
+        let friends = ["mohan","sohan","sanjit","azam"];
+        for (let index = 0; inderx < friends.length; index++) {
+            console.log("hello friend " + friends[index]);
+            
+        }
+         // while loop
+         let k = 0;
+        while (k<4) {
+            console.log(`${k} is less than 4` );
+            k++;
+        }
+
+
+        // do - while
+        // This program is Run atlest one time no matter condition is right or wrong
+        let j = 30;
+        do{
+            console.log(`${j} is less than 4 and we are indisde do while loop`);
+            j++;
+        }while (j<4);
+
+
+        // For Off loop modern loop 
+        // friends.forEach(function f(element){
+        //     console.log("hello friends " + element + "to modern java script");
+        // })
+
+        // this loop is help to work on string and array
+        // It will help to print the value of the array and string
+        // for (element of friends){
+        //     console.log("hello friends " + element + "to modern java script");
+        // }
+
+        let str = "FARHAN_HUSSAIN";
+        let size = 0;
+        for (let i of object) {  //itrator - it will print all the characters
+            console.log("i= ", i);
+            // It will increase the size of str by every time when for loop run
+            size++;
+        }
+        console.log(size);
+
+
+
+        // use loop to itrate over objects in javascript
+        let employee = {
+            name: "farhan",
+            salary: 1000,
+            channel: "code" ,
+            video: "trueGem",
+            
+        }
+        // For In loop 
+        for(key in employee){
+            console.log(`this ${key} of employee is ${employee[key]}`);
+        }
+       
+
+// ForEach Loop in Arrays
+// Callbackfunction : Here it is a function to execute for each elements in the array
+// A Callback is a function passed as an argument to another function.
+
+
+
+    let random = 25; 
+    let Username = prompt("Enter your Number ");
+
+    while(Username != random){
+        Username = prompt("Your Number is wrorg, Enter again");
+    }
+
+    console.log("Yes you right guees right");
+
+    </script>
+</body>
+</html>

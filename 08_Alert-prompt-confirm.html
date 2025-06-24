@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction in alert, prompt and confirm</title>
+</head>
+<body>
+    <div class="container">
+        this is a page
+    </div>
+    <script> /// pop up message -----Alert , prompt, confirm
+
+        // Alert is a in.browser Javascript----- does not return anything
+        // if you want to open web page so first you have click on "ok" than you see the website
+        // this is like a "pop up massage "
+        
+        alert("this is a message");
+        
+        // prompt is used to fill detailes like , name , mob.no-
+        //let name = prompt("what is your name", "Guest");
+        //console.log(name);
+        let age = prompt("write your age here");
+         if(18<=age){
+            console.log("you are allowed to use this site");
+         }
+         else{
+            console.log("you are under age");
+         }
+
+
+        //Confirm -- work like conformation about download, delete , leave site etc
+        let deletePost = confirm("Do you really want to delete this post");
+        console.log(deletePost);
+        if(deletePost){
+            //code to delete the post
+            console.log("your post has been deleted sucessfully");
+        }
+        else{
+            //code to cancel deletion of the post
+            console.log("your post has not been deleted");
+        }
+    </script>
+</body>
+</html>

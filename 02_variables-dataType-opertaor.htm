@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // this is a variable 
+        // Dynamic typing :- It means here no needs to declare data type ex(interger, string, float)
+        var a = 78;
+        var b = "harry void";
+        console.log(b);
+
+
+        //operator in Javascript
+        // Operand-entities on which operators operate
+        // In 3+4 '+' is operator and 3, 4 is operands
+        //1- uniary operator- It has single operand(x= -x)
+        // example-
+                   c= 35.48;
+                   c = -c;
+                   console.log(c)
+        //2- binary operator-It has two operand (x =x+6)
+        // c =453+8;
+        //console.log(c);
+      
+      
+        //3- Airthametic operator in action in javascript
+        var num1 = 56;
+        var num2 = 67;
+        var num3 = 2;
+        var num4 = 9;
+
+        console.log("this value of num1 + num2 is "+ (num1 + num2));
+        console.log("this value of num1 - num2 is "+ (num1 - num2));
+        console.log("this value of num1 * num2 is "+ (num1 * num2));
+        console.log("this value of num1 / num2 is "+ (num1 / num2));
+        //xponentiation it will get power to variable  (numa ** numb) shows the power value of a=2 b=3 (numa ** numb), answer is 16 (2)power3
+        console.log("this value of num3 ** num4 is "+ (num3 ** num4));
+
+        // Increment and Decerement Uniary operator - they work with only single value no need of multiple value
+        console.log("this value of num1 ++ is " + (num1 ++));
+        console.log("this value of ++ num1 is " + (++ num1));
+        console.log("this value of num1 --  is "+ (num1 --));
+        console.log("this value of -- num1 is " + (-- num1));
+
+        console.log("this value of num2 --  is "+ (num2 --));
+        console.log("this value of -- num2 is " + (-- num2));
+
+        var a = 5;
+        var b = 2;
+        console.log("a % b = ", a %  b ); // modulas
+        //4- Assignment Operator +=, -=, *=, /=, 
+
+        let k  = 5;
+        let g = 4;
+
+        k += 2; // a = a + 2 
+        console.log(k);
+        g -= 1; // 
+        g += 3; 
+        k %= 4; 
+        k **= 2;
+        console.log(g);
+        console.log(k);
+
+        //5- Comparision/Relational OPerator- == , equal to and type ===, != ,nto equal to and type !==, >, < , >=, <= 
+        // Answer will be in boolean form 
+        let u = 5;
+        let v = 2;
+        let w = "5"; // String 
+        console.log(" u == v", u==v) // False 
+        console.log(" u != v", u!=v) // true
+        console.log(" u == w", u==w) // True - even w is string but in javascript it will convert string to number than compare with u
+        console.log(" u === w", u===w)// false- it is strict version of comparing 
+        console.log(" u > v", u>w)
+
+
+        //6- Logical Operator - &&(AND Symbol) , ||(Pipe symbol) , !(Not Symbol) 
+        // Answer will be in Boolean Form
+        let r = 5;
+        let s = 2;
+
+        let cond1 = r > s;    // True
+        let cond2 = r == s;   // false
+        let cond3 = r < s;      //false
+        let cond4 = r != s;   // True
+
+        console.log("cond1 && cond2 ", cond1&&cond2);
+        console.log("cond1 && cond4", cond1&&cond4);
+        console.log("cond1 || cond2", cond1||cond2);
+        console.log("cond3 || cond4", cond3||cond4);
+
+        console.log(" !(cond2) ", !(cond2));  // Not- will change the False into True and True into False
+
+        // 7- Bitwise Operator - 
+   </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>this is a heading</h1>
+         
+       <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque animi fugit quasi deleniti
+             ad quisquam eaque aspernatur, nulla hic veritatis nam quia est distinctio iure corporis 
+             rerum tempore quo inventore voluptates rem vel laborum.
+        </p>
+       </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Referance By using Name</title>
+    <script  type="text/javascript">
+        function bodyload(){
+            pic.src="./landscape.jpg";
+            frmRegi.Regi.value="Register";
+            frmLog.Log.value="Login";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img name="pic" width="200px" height="200px">
+    </div>
+        <div>
+            <form name="frmRegi">
+                <h2>Register</h2>
+                <input type="button" name="Regi">
+                <input type="email">
+            </form>
+        </div>
+        <div>
+            <form name="frmLog">
+                <h2>Login</h2>
+                <input type="text" >
+                <input type="button" name="Log">
+            </form>
+        </div>
+</body>
+</html>
