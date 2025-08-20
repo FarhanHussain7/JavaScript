@@ -68,3 +68,6 @@ categories[1] = 23244;
 categories[2] = true;
 console.log(categories);
 console.log(categories[1]);
+
+
+// 8 feb 
