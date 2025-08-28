@@ -1,0 +1,27 @@
+<script>
+    // function Verify(...args){
+    //     var [password, success, failure] = args;
+    //     password = prompt("Enter your Password");
+    //     if(password=="admin"){
+    //         success();
+    //     }else{
+    //         failure();
+    //     }
+    // }
+// Verify("admin", function(){document.write("login success....");}, function(){document.write("Invalid Password ....");});
+
+
+    function Verify(msg,...args){
+        var [password, success, failure] = args;
+	document.write('<h2> ${msg}</h2>');
+        password = prompt("Enter your Password");
+        if(password=="admin"){
+            success();
+        }else{
+            failure();
+        }
+    }
+
+    Verify("verify user Details", "admin", function(){document.write("login success....");}, function(){document.write("Invalid Password ....");});
+
+</script>
