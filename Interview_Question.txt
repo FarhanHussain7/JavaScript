@@ -1,0 +1,91 @@
+Question 1 = Can Javascript directly connect to database ? 
+Answer : NO . 
+Question 2 = Which is not a data type of javascript ?
+Answer : float .
+Question 3 = which symbol is used for single line comment in javascript?
+Answer : //.
+Question 4 = What will typeof null return?
+Answer : "Object"
+Question 5 = how we can make immutable object in javascript ?
+Answer : var user = {name:"farhan"} ; Object.freeze(user);
+Question 6 - Operator & expression what will 2 + "2" evaluate to?
+Answer : "22"
+Question 7 - which operator is used for strict equality in javascript?
+Answer : ===
+Question 8 - what does !!"false" evaluate to?
+Answer : true, beacuse the first ! make it boolean false and next ! make false to true .
+Question 9 - What is the result of 5 == "5" ?
+Answer : true, beacuse  
+Question 9 - What is the result of "5 "=== " 5" ?
+Answer : false , beacuse of space .
+Question 10 - Output of the loop ?
+            for(;;){
+                console.log("loop");
+            }
+Answer : infinite loop 
+Question 11 - What will be the console.log(typeof NaN) print?
+Answer : "number"
+Question 12 - Output of below statement ?
+    let x = null;
+    let y = null;
+    console.log(x+y);
+Answer : 0
+Question 13 : What will be the result console.log(typeof function(){}); return?
+Answer : "function"
+Question 14 - What will be the result console.log(typeof function(){}()); return?
+Answer : "undefined".
+Question 15 - what is the default return value of a function in javascript if no return statement is used?
+Answer : undefined
+Question 16 - Which typeof of function executes immediately after its definition?
+Answer : IIEF (immediately Invoke function)
+Question 17 - Output of below statement ? 
+        console.log(x);
+        let x = 10;
+Answer : ReferanceError 
+Question 18 - how do you create an Object in javascript ? 
+Answer : let Obj = {};
+            let Obje = new Object();
+Question 19 - how do you access a property in an object ? 
+Answer : obj [property] and obj.property
+Question 20 - Which method is used to add a new element at the end of an array ? 
+Answer : push()
+Question 21 - what will console.log([1,2,3].length) return ?
+Answer : 3 
+Question 22 - how do you remove 2 element from start in array ?
+Answer : splice()
+Question 23 - Which keyword allows block-scoped variable declration?
+Answer : let and const .
+Question 24 - which of the follwing is true about const variable?
+Answer : they cannot be reassigned.
+Question 25 - what is the Output of console.log(typeof([]));?
+Answer : "object"
+Question 25 - What is template literal in javascript?
+Answer : A strong enclosed in backticks('')
+Question 26 - what will console.log(..."hello");
+Answer : "H e l l o" 
+Question 27 - How do you define an arrow function 
+Answer : const add  = (a,b)=> a+b;
+Question 28 - what does the spread operator do ... in javascript ? 
+Answer  : Combine array and Expend iterable element
+Question 29 - what will be console.log([...new set([1,2,3])]); return ?
+Answer : [1, 2, 3]
+Question 30 - Which statement about arrow function is true?
+Answer : they do not bind this 
+Question 31 - Output of follow code ?
+        function tryfruit(...fruit){
+            console.log(...fruit);
+        }
+        tryfruit('apple','banana','grapes');
+Answer : apple banana grapes
+Question 32 - what is the purpose of javascript promise?
+Answer : Handle Asynchronous operations
+Question 33 - Which state in not valid for a Promise?
+Answer : Running
+Question 34 - Use of await keyword?
+Answer : wait for an Asynchronous operations to finish before continuing the execution
+Question 35 - Which method select an element by ID?
+Answer : document.getElementById();
+Question 36 - which event is triggered when an input field loses focus?
+Answer : blur 
+Question 37 - which method adds an event listerner to an element ? 
+Answer : element.AddEventListner();
