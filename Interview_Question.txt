@@ -89,3 +89,73 @@ Question 36 - which event is triggered when an input field loses focus?
 Answer : blur 
 Question 37 - which method adds an event listerner to an element ? 
 Answer : element.AddEventListner();
+
+
+Here’s a detailed list of MERN stack interview questions with concise, high-impact answers to help you ace your mechanical round.
+
+🧠 JavaScript & ES6+
+- Q: What is the difference between var, let, and const?
+A: var is function-scoped and allows redeclaration. let and const are block-scoped; const cannot be reassigned.
+- Q: What is a closure?
+A: A closure is a function that retains access to its lexical scope even when executed outside that scope.
+- Q: Explain the event loop.
+A: The event loop handles asynchronous operations by placing callbacks in a queue and executing them after the call stack is clear.
+
+🗂️ MongoDB
+- Q: How do you model one-to-many relationships?
+A: Use embedded documents for small datasets or references (ObjectId) for scalable relationships.
+- Q: What are indexes in MongoDB?
+A: Indexes improve query performance by allowing MongoDB to quickly locate data without scanning every document.
+- Q: What is aggregation?
+A: Aggregation processes data records and returns computed results using stages like $match, $group, $sort.
+
+🔌 Express.js
+- Q: What is middleware in Express?
+A: Middleware functions run during the request-response cycle and can modify req, res, or end the cycle.
+- Q: Difference between app.use() and app.get()?
+A: app.use() applies middleware to all routes; app.get() handles GET requests for a specific path.
+- Q: How do you handle errors globally?
+A: Use a custom error-handling middleware with four parameters: (err, req, res, next).
+
+⚛️ React.js
+- Q: What is the virtual DOM?
+A: A lightweight copy of the real DOM that React uses to optimize rendering by diffing and updating only changed elements.
+- Q: What is prop drilling?
+A: Passing props through multiple levels of components. Avoid it using Context API or state management tools like Redux.
+- Q: How does useEffect work?
+A: It runs side effects after render. You can control its execution with dependency arrays.
+
+🌐 Node.js
+- Q: What is the role of the event loop in Node.js?
+A: It enables non-blocking I/O by handling asynchronous callbacks in a single-threaded environment.
+- Q: What are streams?
+A: Streams handle continuous data flow (e.g., file read/write) efficiently using Readable, Writable, Duplex, and Transform.
+- Q: How do you manage environment variables?
+A: Use .env files and the dotenv package to load variables into process.env.
+
+🔄 Full-Stack Integration
+- Q: How do you handle CORS?
+A: Use the cors middleware in Express to allow cross-origin requests from the frontend.
+- Q: How do you implement JWT authentication?
+A: Generate tokens on login, store them in localStorage or cookies, and verify them in protected routes using middleware.
+- Q: How do you deploy a MERN app?
+A: Use services like Vercel (frontend), Heroku or Render (backend), and MongoDB Atlas for cloud database.
+
+🧪 Testing & Debugging
+- Q: How do you test React components?
+A: Use tools like Jest and React Testing Library to simulate user interactions and assert UI behavior.
+- Q: How do you test Express APIs?
+A: Use Postman for manual testing and Jest/Supertest for automated endpoint testing.
+
+🛡️ Best Practices
+- Q: How do you secure a MERN app?
+A: Use HTTPS, sanitize inputs, validate data, implement rate limiting, and use secure headers (helmet middleware).
+- Q: What are CI/CD tools you’ve used?
+A: GitHub Actions, Jenkins, or GitLab CI for automated testing and deployment pipelines.
+
+Sources:
+- GeeksforGeeks MERN Stack Interview Guide
+- FullStack.Cafe’s answered MERN questions
+- Internshala’s top 40 MERN interview questions
+
+I can also simulate a mock interview with follow-up questions and scoring logic if you'd like to practice under pressure.

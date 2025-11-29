@@ -8,28 +8,26 @@
 <body>
     <div class="container">this is my container</div>
     <script>
-        let jsonobj = {
-            name: "harry",
-            channel: "code",
-            friends: "rohit",
-            food: "chicken"
-        }
-        console.log(jsonobj);
+    // Define a JavaScript object with some key-value pairs
+let jsonobj = {
+    name: "harry",
+    channel: "code",
+    friends: "rohit",
+    food: "chicken"
+};
+console.log(jsonobj); // Log the original object to the console
 
+// Convert the JavaScript object to a JSON string
+let myjsonStr = JSON.stringify(jsonobj);
+console.log(myjsonStr); // Log the stringified version of the object
 
-        //
-        let myjsonStr = JSON.stringify(jsonobj);
-        console.log(myjsonStr);
+// Replace the string "harry" with "neo" in the JSON string
+myjsonStr = myjsonStr.replace('harry', 'neo');
+console.log(myjsonStr); // Log the updated JSON string
 
-        //
-        myjsonStr = myjsonStr.replace('harry', 'neo')
-        console.log(myjsonStr);
-
-
-        // 
-        newjsonobj = JSON.parse(myjsonStr);
-        console.log(newjsonobj);
-
+// Parse the modified JSON string back into a JavaScript object
+newjsonobj = JSON.parse(myjsonStr);
+console.log(newjsonobj); // Log the new object with the updated name
 
     </script>
 </body>
