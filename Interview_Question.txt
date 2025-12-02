@@ -90,6 +90,239 @@ Answer : blur
 Question 37 - which method adds an event listerner to an element ? 
 Answer : element.AddEventListner();
 
+Question 38 - What does event.preventDefault() do?
+Answer : Stops the default action of an event 
+
+Question 39 - What is localStorage used for?
+Answer : Storing data persistently in the browser 
+
+Question 40 - Which method converts a javascript object into JSON String ? 
+Answer : JSON.stringify()
+
+Question 41 - Waht will console.log(parseInt("10px")) return ? 
+Answer : 10 , beacuse String value changed into integer 
+
+Question 42 - Which method executes a function repeatedly with a time intervel?
+Answer : setIntervel()
+
+Question 43 - How do you check if a veriable is an array?
+Answer : Array.isArray(x);
+
+Question 44 - what is the closure in javascript ?
+answers : A function inside another function that has access to its parent scope .
+
+Question 45 - Which of the following is true about closures?
+Answer : closures have access to their own scope 
+         closure  have access to their parent function's scope
+         closures have access to global scope 
+
+Question 46 - What will this code output? 
+    function outer(){
+        let count = 0;
+        return function inner(){
+            count++;
+            console.log(count);
+        };
+    }
+
+    const counter = outer();
+    counter();
+    counter();
+
+Answer : 1 2 
+
+Question 47 : Which statement about var and let is true? 
+Answer : var is function scoped , let is block scoped
+
+Question 48 : What will console.log(x); var x=10 ; output ? 
+Answer : undefined
+
+Question 49 : Which statement is used for error handling in javascript?
+Answer : try .. catch
+        throw 
+        finally 
+
+Question 50 : What happens if an error occurs inside the try block? 
+Answer : The error is caught in the catch block 
+
+Question 51 : What will console.log(x); inside try block with no catch or finally do ?
+Answer: throw a ReferanceError 
+
+Question 52 : Which method is used to Generate a custom error?
+Answer : throw new Error() 
+
+Question 53 : What will finally do in a try-catch-finally block?
+Answer :  Always Execute 
+
+Question 54 : OOP (Object-Oriented_Programming) in javascript which keyword is used to create a class in javascript ? 
+Answer : class 
+
+Question 55 : What is the purpose of the constructor method in a class ? 
+Answer : To initialize object properties 
+
+Question 56 : which keyword is used for inheritance in javascript?
+Answer : extends 
+
+Question 57 : Which method in a class is used to call the parent class constructor? 
+Answer : super()
+
+Question 58 : Which statement about JavaScript classes is true ? 
+Answer : They are sysntatic sugar over prototypes
+
+Question 59 : Web APIs & Asynchronous JavaScript ? 
+Answer : XMLHttpReQuest 
+         Fetch API 
+         Axios 
+
+Question 60 : Which method sends a GET request using Fetch API? 
+Answer : fetch(url)
+         fetch(url, {method :"GET" })
+
+Question 61 : What does navigator.geolocation.getCurrentPosition() do?
+Answer : Get's user's location
+
+Question 62 : Which storage API stores data persistently?
+Answer : localStorage
+
+Question 63 : How you can set intervel in javascript?
+Answer : setIntervel() 
+
+Question 64 : Which method removes an element from an array?
+Answer : splice()
+
+Question 65 : Which javascript engine is used in Google Chrome? 
+Answer : V8 
+
+Question 66 : Which method converts a string into a number ? 
+Answer : parseInt() 
+         Number() 
+         + (unary plus)
+
+Question 67 : Which function Generates a random number between 0 and 1 ? 
+Answer: Math.random()
+
+Question 68 : Which of the following is a few falsy value in javascript ?
+Answer : undefined
+
+Question 69 : What will console.log([]==false); return?
+Answer : true, 
+
+Question 70 : Which of the following is NOT a primitive data type in javascript?
+Answer : Object 
+
+Question 71 : How do you deep clone an object in javascript ?
+Answer : JSON.parse(JSON.stringify(obj))
+
+Question 72 : What is the output of console.log(2 + "2"-1);?
+Answer : 21, 
+
+Question 73 :Which method is used to filter elements from an array?
+Answer : filter()
+
+Question 74 : Which function Combines array element into a single value ?
+Answer : reduce()
+
+Question 75 : What does the following code return ?
+Answer : 
+
+ console.log([1,2,3].map(num=> num * 2 ));
+
+ Answer : [2, 4, 6]
+
+ Question 76 : Which of the following is NOT an immutable operation?
+ Answer : splice()
+
+ Question 77 : What is the event loop in javascript ?
+Answer : A mechanism that allows async operation 
+
+Question 78 : Which of the following executes first in the event loop?
+Answer: console.log()
+
+Question 79 : which queue does setTimeout() use in javascript?
+Answer : callback queue 
+
+Question 80 : What will be the output of this code?
+     console.log("A");
+            setTimeout(()=> console.log("B"), 0);
+        console.log("C");
+
+Answer : A C B 
+
+Question 81 : Which of the following is the best practice in javascript ?
+Answer : Avoiding global variable 
+
+Question 82 : What does "debouncing" do in javascript?
+Answer : Delays function execution until a pause in events 
+
+Question 83 : What does "throttling" do?
+Answer :  Execute a function only at fixed intervel 
+
+Question 84 : Which of the following improves JavaScript performance?
+Answer : Minifying JavaScript files 
+         using lazy loading
+         Avoiding unnecessary DOM manipulations 
+
+Question 85 : What is the best way to check if a veriable is null or undefined?
+Answer : if(x === null || x === undefined )
+
+Question 86 : What does document.createElement('div') do?
+Answer : create a div but does not append it .
+
+Question 87 : Which API is used to create animations in javascript?
+Answer : requestAnimationFrame()
+
+Question 88 : Which function removes whitespaces from both ends of a string?
+Answer : trim ()
+
+Question 89 : Which method removes the last element from an array? 
+Answer : pop()
+
+Question 90 : What is the output of the following code?
+
+        console.log(myfunc);
+        function myfunc() {
+            return "HEllo";
+        }
+
+Answer :  get all the code 
+
+Question 91 : Which of the following is an example of a higher-order function?
+Answer : A function that returns another function  
+
+Question 92 : Which method is used to handle asynchronous functions in javascript?
+Answer : async/await 
+        setTimeout
+        promise.then()
+
+Question 93 : which of the following in not true clouser?
+Answer : A closure allows a function to retain access to variable from its outer scope.
+        closure are created every time a function is invoked 
+        closure help in data encapsulation 
+
+Question 94 : What will be the output of the following code?
+
+    const obj = {
+        value: 42, 
+        getValue: () => {
+            return this.value;
+        }
+    };
+    console.log(obj.getValue());
+
+Answer : undefined 
+
+Question 95 : What wiil be the output of the following asynchronous function ?
+    async function foo(){
+        return "hello";
+    }
+console.log(foo());
+
+Answer :Promise{ "hello" }
+
+Question 96 : What is currying in javascript?
+Answer :A technique where a function is transformed into a sequence of unary (one-argument) functions.
+
+
 
 Here’s a detailed list of MERN stack interview questions with concise, high-impact answers to help you ace your mechanical round.
 
